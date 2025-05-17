@@ -68,7 +68,7 @@ export default function Dashboard() {
           </div>
 
           <div className="relative flex items-center">
-            <Search className="absolute left-3 h-5 w-5 text-muted-foreground" />
+            
             <input
               type="text"
               placeholder="Ask any question about your studies or search for content..."

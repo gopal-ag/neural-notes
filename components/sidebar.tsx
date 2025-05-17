@@ -42,7 +42,7 @@ const navItems: NavItem[] = [
     icon: Calendar,
   },
   {
-    title: "Knowledge Graph",
+    title: "SecondBrain",
     href: "/knowledge",
     icon: Network,
   },
