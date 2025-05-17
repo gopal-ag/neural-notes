@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 222 47% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 252 99% 74%;
+    --secondary-foreground: 222 47% 11%;
+
+    --accent: 162 75% 59%;
+    --accent-foreground: 222 47% 11%;
+
+    --muted: 217.2 32.6% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 12%;
+    --input: 217.2 32.6% 12%;
+    --ring: 252 99% 74%;
+
+    --radius: 0.5rem;
+
+    --sidebar-width: 16rem;
+    --sidebar-width-collapsed: 5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.neumorphic {
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.02);
+}
+
+.neumorphic-inset {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(255, 255, 255, 0.02);
+}
+
+.gradient-mesh {
+  background: radial-gradient(circle at 10% 20%, rgba(42, 61, 102, 0.15) 0%, transparent 20%),
+    radial-gradient(circle at 80% 50%, rgba(124, 131, 253, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 40% 80%, rgba(72, 229, 194, 0.08) 0%, transparent 40%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7c83fd, #48e5c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.knowledge-node {
+  transition: all 0.3s ease;
+}
+
+.knowledge-node:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+.flashcard {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.calendar-day {
+  transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: rgba(124, 131, 253, 0.1);
+}
+
+.calendar-day.has-event {
+  background-color: rgba(72, 229, 194, 0.1);
+  border: 1px solid rgba(72, 229, 194, 0.3);
+}
+
+.upload-zone {
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+  background-color: rgba(124, 131, 253, 0.1);
+  border-color: rgba(124, 131, 253, 0.5);
+}
+
+.upload-zone.dragging {
+  background-color: rgba(72, 229, 194, 0.1);
+  border-color: rgba(72, 229, 194, 0.5);
+}
+
+.node-link {
+  stroke: rgba(124, 131, 253, 0.5);
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.node-link:hover {
+  stroke: rgba(124, 131, 253, 0.8);
+  stroke-width: 3;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #7c83fd, #48e5c2);
+}
+
+.modern-tabs {
+  @apply relative mb-6 flex w-full overflow-hidden rounded-xl bg-card p-1;
+}
+
+.modern-tab {
+  @apply relative z-10 flex-1 rounded-lg px-3 py-2.5 text-center text-sm font-medium transition-all;
+}
+
+.modern-tab-active {
+  @apply text-secondary-foreground;
+}
+
+.modern-tab-inactive {
+  @apply text-muted-foreground hover:text-foreground;
+}
+
+.modern-tab-highlight {
+  @apply absolute left-0 top-0 h-full rounded-lg bg-secondary/20 transition-all duration-300 ease-in-out;
+}
+
+.search-container {
+  @apply relative flex w-full items-center overflow-hidden rounded-xl bg-card p-1 shadow-lg;
+}
+
+.search-input {
+  @apply w-full bg-transparent px-4 py-3 text-lg outline-none placeholder:text-muted-foreground;
+}
+
+.search-icon {
+  @apply absolute left-4 top-1/2 -translate-y-1/2 text-secondary;
+}
+
+.upload-container {
+  @apply relative flex cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl bg-card p-8 shadow-lg transition-all duration-300 hover:bg-card/80;
+}
+
+.stat-card {
+  @apply flex flex-col rounded-xl bg-card p-6 shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+.stat-icon {
+  @apply mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-secondary/10;
+}
+
+.stat-value {
+  @apply text-3xl font-bold;
+}
+
+.stat-label {
+  @apply text-sm text-muted-foreground;
+}
+
+.course-card {
+  @apply relative flex h-full flex-col overflow-hidden rounded-xl bg-card shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+.course-image {
+  @apply relative h-48 w-full overflow-hidden;
+}
+
+.course-content {
+  @apply flex flex-1 flex-col p-5;
+}
+
+.course-title {
+  @apply mb-2 text-xl font-bold;
+}
+
+.course-description {
+  @apply mb-4 text-sm text-muted-foreground;
+}
+
+.course-footer {
+  @apply mt-auto flex items-center justify-between border-t border-border pt-4;
+}
+
+.logo-container {
+  @apply flex items-center gap-3;
+}
+
+.logo {
+  @apply h-10 w-10 rounded-full bg-gradient-to-br from-secondary to-accent;
+}
+
+.logo-text {
+  @apply font-grotesk text-xl font-bold;
+}
