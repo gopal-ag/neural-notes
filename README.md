@@ -5,7 +5,7 @@
 
 ## Your Digital Second Brain for Accelerated Learning
 
-NeuraSynth is an ultra-modern study platform that transforms how you absorb, connect, and retain knowledge. Built with Next.js and cutting-edge AI, it serves as your digital second brain - analyzing your study materials, organizing concepts visually, and optimizing your learning journey.
+NeuralNotes is an ultra-modern study platform that transforms how you absorb, connect, and retain knowledge. Built with Next.js and cutting-edge AI, it serves as your digital second brain - analyzing your study materials, organizing concepts visually, and optimizing your learning journey.
 
 ---
 
@@ -63,7 +63,7 @@ NeuraSynth is an ultra-modern study platform that transforms how you absorb, con
 
 ## 💻 Technical Implementation
 
-NeuraSynth is built with a modern tech stack designed for performance and scalability:
+NeuralNotes is built with a modern tech stack designed for performance and scalability:
 
 - **Frontend**: Next.js with App Router for lightning-fast navigation
 - **Styling**: Tailwind CSS with custom theming for the ultra-modern web3-inspired UI
@@ -107,7 +107,7 @@ NeuraSynth is built with a modern tech stack designed for performance and scalab
 
 ## 🎨 Design Philosophy
 
-NeuraSynth embraces a minimalist, ultra-modern aesthetic inspired by web3 applications:
+NeuralNotes embraces a minimalist, ultra-modern aesthetic inspired by web3 applications:
 
 - **Color Scheme**: Deep Focus palette with Dark Blue (#2A3D66), Lavender Blue (#7C83FD), and Mint (#48E5C2) accents
 - **Typography**: Clean, futuristic sans-serif fonts optimized for both readability and modern appeal
@@ -121,10 +121,10 @@ NeuraSynth embraces a minimalist, ultra-modern aesthetic inspired by web3 applic
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/neurasynth.git
+git clone https://github.com/gopal-ag/neural-notes.git
 
 # Navigate to project directory
-cd neurasynth
+cd neural-notes
 
 # Install dependencies
 npm install
@@ -134,17 +134,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
----
-
-## 📱 Mobile Experience
-
-NeuraSynth offers a fully responsive experience optimized for mobile use:
-
-- **Simplified Navigation**: Touch-friendly interface with gesture controls
-- **Offline Functionality**: Study without an internet connection
-- **Push Notifications**: Stay on track with timely reminders
-- **Quick Capture**: Add new materials or notes on the go
 
 ---
 
