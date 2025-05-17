@@ -20,6 +20,7 @@ export function StudyPlanSetup({ onComplete }: StudyPlanSetupProps) {
   const [deadline, setDeadline] = useState("")
   const [hoursPerDay, setHoursPerDay] = useState(2)
   const [difficulty, setDifficulty] = useState("medium")
+  const [selectedDays, setSelectedDays] = useState<string[]>([])
 
   const handleNext = () => {
     if (step < 3) {
@@ -33,6 +34,14 @@ export function StudyPlanSetup({ onComplete }: StudyPlanSetupProps) {
     if (step > 1) {
       setStep(step - 1)
     }
+  }
+
+  const toggleDay = (day: string) => {
+    setSelectedDays((prevSelectedDays) =>
+      prevSelectedDays.includes(day)
+        ? prevSelectedDays.filter((d) => d !== day)
+        : [...prevSelectedDays, day]
+    )
   }
 
   return (
@@ -118,7 +127,12 @@ export function StudyPlanSetup({ onComplete }: StudyPlanSetupProps) {
                 </Label>
                 <div className="flex flex-wrap gap-2">
                   {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
-                    <Button key={day} variant="outline" className="flex-1">
+                    <Button
+                      key={day}
+                      variant={selectedDays.includes(day) ? "secondary" : "outline"}
+                      className="flex-1"
+                      onClick={() => toggleDay(day)}
+                    >
                       {day}
                     </Button>
                   ))}
