@@ -42,6 +42,8 @@ NeuraSynth is an ultra-modern study platform that transforms how you absorb, con
 ### 📝 Active Learning Tools
 <img width="1470" alt="Screenshot 2025-05-17 at 12 31 40 PM" src="https://github.com/user-attachments/assets/55a19679-6d0f-4f5f-88d8-8ca81c5700f0" />
 
+<img width="1470" alt="Screenshot 2025-05-17 at 12 32 02 PM" src="https://github.com/user-attachments/assets/2357b468-172e-434a-bef6-d31080d0d354" />
+
 - **AI-Generated Flashcards**: Automatically created from your uploaded materials
 - **Intelligent Quizzing**: Test your understanding with questions targeting key concepts
 - **Weakness Detection**: Identify and strengthen areas that need more attention
