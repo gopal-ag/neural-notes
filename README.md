@@ -1,5 +1,5 @@
 # NeuralNotes
-## Built at CodeCircuit Hackathon
+### Built at CodeCircuit Hackathon
 <img width="1470" alt="Screenshot 2025-05-17 at 12 30 12 PM" src="https://github.com/user-attachments/assets/b28434c5-b096-4c5a-848f-5ba46313fe01" />
 
 
